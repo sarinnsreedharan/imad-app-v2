@@ -14,7 +14,7 @@ app.get('/Article-one',function(req,res){
 app.get('/Article-two',function(req,res){
     res.send("Article  two will be displayed here");
 });
-app.get('/Article-three,function(req,res){
+app.get('/Article-three',function(req,res){
     res.send("Article three will be displayed here");
 });
 
