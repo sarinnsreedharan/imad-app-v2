@@ -1,15 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var counter=0;
-var button=document.getElementById("counter");
 
-button.onclick=function(){
-    counter=countet+1;
-    var span=document.getElementById("val");
-    span.innerHTML=counter.toString();
-    
-}
 var app = express();
 app.use(morgan('combined'));
 
