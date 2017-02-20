@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var counter;
 var app = express();
 app.use(morgan('combined'));
 
@@ -17,11 +17,11 @@ app.get('/Article-two',function(req,res){
 app.get('/Article-three',function(req,res){
     res.send("Article three will be displayed here");
 });
-var counter;
-app.get('/counter',function(req,res)){
+
+app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
-}
+});
 
 
 app.get('/ui/style.css', function (req, res) {
