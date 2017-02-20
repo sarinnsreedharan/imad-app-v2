@@ -7,3 +7,5 @@ button.onclick=function(){
     span.innerHTML=counter.toString();
     
 }
+var span=getElementById("val");
+span.innerHTML()=counter.toString();
