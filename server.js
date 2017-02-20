@@ -1,7 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var counter;
+var counter=0;
+var button=document.getElementById("counter");
+
+button.onclick=function(){
+    counter=countet+1;
+    var span=document.getElementById("val");
+    span.innerHTML=counter.toString();
+    
+}
 var app = express();
 app.use(morgan('combined'));
 
@@ -18,10 +26,7 @@ app.get('/Article-three',function(req,res){
     res.send("Article three will be displayed here");
 });
 
-app.get('/counter',function(req,res){
-    counter=counter+1;
-    res.send(counter.toString());
-});
+
 
 
 app.get('/ui/style.css', function (req, res) {
